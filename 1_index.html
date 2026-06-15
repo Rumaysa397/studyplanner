@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StudySync - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #0d6efd, #4f9cff);
+            color: white;
+        }
+
+        .feature-card {
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">📚 StudySync</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="planner.html">Planner</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold">Welcome to StudySync</h1>
+
+        <p class="lead mt-3">
+            Organize your studies, track your tasks, and stay productive every day.
+        </p>
+
+        <a href="planner.html" class="btn btn-light btn-lg mt-3">
+            Get Started
+        </a>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="text-center mb-5 fw-bold">
+            Why Choose StudySync?
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow feature-card h-100">
+                    <div class="card-body text-center">
+                        <h3>📅</h3>
+                        <h5 class="card-title">Task Planning</h5>
+                        <p class="card-text">
+                            Manage assignments, projects, and study goals efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow feature-card h-100">
+                    <div class="card-body text-center">
+                        <h3>📊</h3>
+                        <h5 class="card-title">Progress Tracking</h5>
+                        <p class="card-text">
+                            Monitor your completed and pending tasks in real time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow feature-card h-100">
+                    <div class="card-body text-center">
+                        <h3>🎯</h3>
+                        <h5 class="card-title">Stay Focused</h5>
+                        <p class="card-text">
+                            Build productive habits and achieve your academic goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Motivational Quote -->
+<section class="bg-white py-5">
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-4">Motivation Corner</h2>
+
+        <blockquote class="blockquote">
+            <p id="quote">
+                Success is the sum of small efforts repeated day in and day out.
+            </p>
+        </blockquote>
+
+        <button class="btn btn-primary mt-3" onclick="changeQuote()">
+            New Quote
+        </button>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 mt-5">
+    <div class="container text-center">
+        <h5>StudySync</h5>
+
+        <p>
+            Plan Today, Achieve Tomorrow.
+        </p>
+
+        <p class="mb-0">
+            © 2026 StudySync. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const quotes = [
+        "Success is the sum of small efforts repeated day in and day out.",
+        "Dream big. Start small. Act now.",
+        "Discipline is choosing what you want most over what you want now.",
+        "Your future is created by what you do today.",
+        "Small progress is still progress."
+    ];
+
+    function changeQuote() {
+        let random = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[random];
+    }
+</script>
+
+</body>
+</html>
